@@ -114,7 +114,7 @@ $services = [
 
 <section class="page-hero">
   <div class="hero-media">
-    <img src="assets/images/warehouse.jpg" alt="Warehouse and freight logistics operations" width="1200" height="800" fetchpriority="high">
+    <img src="/assets/images/warehouse.jpg" alt="Warehouse and freight logistics operations" width="1200" height="800" fetchpriority="high">
   </div>
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="page-hero-content">
@@ -126,7 +126,7 @@ $services = [
 
 <section class="section">
   <div class="container">
-    <p class="availability-note reveal">Service descriptions explain the transportation solutions Trucking24Fit can quote. Do not assume every service is available on every lane until confirmed by our team for your shipment.</p>
+    <p class="availability-note reveal">Tell us your lane, freight profile, and timing—we confirm equipment and transit details for every shipment before booking.</p>
 
     <?php foreach ($services as $service): ?>
       <article class="service-block reveal" id="<?= htmlspecialchars($service['id'], ENT_QUOTES, 'UTF-8') ?>">
@@ -142,7 +142,7 @@ $services = [
               <li><?= htmlspecialchars($benefit, ENT_QUOTES, 'UTF-8') ?></li>
             <?php endforeach; ?>
           </ul>
-          <a class="btn btn-accent" href="quote.php?service=<?= urlencode($service['title']) ?>">Request a Quote</a>
+          <a class="btn btn-accent" href="/quote?service=<?= urlencode($service['title']) ?>">Request a Quote</a>
         </div>
       </article>
     <?php endforeach; ?>
@@ -153,7 +153,7 @@ $services = [
   <div class="container reveal">
     <h2>Need Help Selecting a Service?</h2>
     <p>Tell us about your freight type, equipment needs, and schedule. We will recommend a practical transportation approach for your shipment.</p>
-    <a class="btn btn-accent" href="quote.php">Get a Freight Quote</a>
+    <a class="btn btn-accent" href="/quote">Get a Freight Quote</a>
   </div>
 </section>
 

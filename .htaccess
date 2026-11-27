@@ -4,12 +4,24 @@ Options -Indexes
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Redirect bare directory to index
   DirectoryIndex index.php index.html
 
-  # Block direct access to sensitive folders
+  # Block sensitive folders
   RewriteRule ^submissions/ - [F,L]
   RewriteRule ^includes/ - [F,L]
+
+  # Redirect .php page URLs to clean paths (hide .php from the address bar)
+  RewriteCond %{THE_REQUEST} \s/index\.php[\s?] [NC]
+  RewriteRule ^index\.php$ / [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/+((?:about|services|equipment|industries|quote|contact))\.php[\s?] [NC]
+  RewriteRule ^ %1 [R=301,L]
+
+  # Clean URL → PHP file
+  RewriteRule ^(about|services|equipment|industries|quote|contact)/?$ $1.php [L,QSA]
+
+  # Clean API endpoints
+  RewriteRule ^api/(quote|contact)/?$ api/$1.php [L,QSA]
 </IfModule>
 
 <IfModule mod_headers.c>
@@ -18,7 +30,6 @@ Options -Indexes
   Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
-# Cache static assets
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType image/jpeg "access plus 30 days"

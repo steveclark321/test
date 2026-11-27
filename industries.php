@@ -59,7 +59,7 @@ $industries = [
 
 <section class="page-hero">
   <div class="hero-media">
-    <img src="assets/images/logistics.jpg" alt="Commercial logistics and freight operations" width="1200" height="800" fetchpriority="high">
+    <img src="/assets/images/logistics.jpg" alt="Commercial logistics and freight operations" width="1200" height="800" fetchpriority="high">
   </div>
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="page-hero-content">
@@ -85,7 +85,7 @@ $industries = [
         <div>
           <h2><?= htmlspecialchars($industry['title'], ENT_QUOTES, 'UTF-8') ?></h2>
           <p><?= htmlspecialchars($industry['desc'], ENT_QUOTES, 'UTF-8') ?></p>
-          <a class="btn btn-accent" href="quote.php?industry=<?= urlencode($industry['title']) ?>">Request a Quote</a>
+          <a class="btn btn-accent" href="/quote?industry=<?= urlencode($industry['title']) ?>">Request a Quote</a>
         </div>
       </article>
     <?php endforeach; ?>
@@ -96,7 +96,7 @@ $industries = [
   <div class="container reveal">
     <h2>Shipping in Another Industry?</h2>
     <p>If your market is not listed, contact Trucking24Fit with your freight details. We will review your requirements and advise on next steps.</p>
-    <a class="btn btn-accent" href="contact.php">Contact Us</a>
+    <a class="btn btn-accent" href="/contact">Contact Us</a>
   </div>
 </section>
 

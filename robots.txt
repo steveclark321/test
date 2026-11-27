@@ -5,4 +5,4 @@ Disallow: /api/
 Disallow: /includes/
 Disallow: /submissions/
 
-Sitemap: /sitemap.xml
+Sitemap: https://trucking24fit.org/sitemap.xml

@@ -1,54 +1,41 @@
 # Trucking24Fit Website
 
-Professional trucking & freight transportation website for **Trucking24Fit**.
+Professional trucking & freight transportation website for **Trucking24Fit**  
+**24820 NE 135th Lane, Fort McCoy, FL 32134** · **contact@trucking24fit.org**
 
 ## Stack
 
-- HTML / CSS / JavaScript (front end)
-- PHP 8+ (form handling, shared includes)
-- No build step required — deploy to standard Apache/Nginx + PHP hosting
+- HTML / CSS / JavaScript
+- PHP 8+ (shared includes + form handling)
+- Clean URLs (no `.php` in public links)
 
 ## Pages
 
-| Page | File |
-|------|------|
-| Home | `index.php` |
-| About Us | `about.php` |
-| Services | `services.php` |
-| Equipment & Fleet | `equipment.php` |
-| Industries | `industries.php` |
-| Request a Quote | `quote.php` |
-| Contact Us | `contact.php` |
+| Page | URL |
+|------|-----|
+| Home | `/` |
+| About Us | `/about` |
+| Services | `/services` |
+| Equipment & Fleet | `/equipment` |
+| Industries | `/industries` |
+| Request a Quote | `/quote` |
+| Contact Us | `/contact` |
 
-## Before going live
+## Configuration
 
-1. Edit contact details in `includes/site-config.php` (phone, email, address, hours, optional Google Maps embed URL).
-2. Edit form delivery settings in `api/config.php`:
-   - `notification_email` — where quote/contact submissions are sent
-   - `from_email` / `from_name` — must be allowed by your mail host
-   - `send_email` — set `true` when PHP `mail()` or your host mail relay works
-   - `webhook_url` — optional Zapier/Make/custom webhook
-   - `save_submissions` — keeps JSON backups under `/submissions` (web-blocked)
-3. Replace placeholder statistics on the homepage with verified metrics.
-4. Replace sample testimonials with genuine customer quotes.
-5. Update editable equipment specifications on `equipment.php`.
-6. Set absolute URLs in `sitemap.xml` and the `Sitemap:` line in `robots.txt` to your live domain.
-7. Confirm which services are actively offered and adjust copy if needed.
+- Public contact details: `includes/site-config.php`
+- Form delivery (email / webhook / JSON backup): `api/config.php`
+
+Submissions are emailed to `contact@trucking24fit.org` and saved under `/submissions` (web-blocked).
 
 ## Local development
 
 ```bash
-php -S 127.0.0.1:8080 -t .
+php -S 127.0.0.1:8080 router.php
 ```
 
-Open `http://127.0.0.1:8080/`. Forms POST to `/api/quote.php` and `/api/contact.php` and save to `/submissions` even if mail is not configured.
+Open `http://127.0.0.1:8080/`. On Apache hosting, `.htaccess` rewrites clean URLs and redirects old `.php` paths.
 
-## Security notes
+## Deploy
 
-- `/submissions` and `/includes` are blocked via `.htaccess`
-- Forms include honeypot + basic IP rate limiting
-- Input is sanitized server-side; JSON API responses only
-
-## License / assets
-
-Photography is sourced from Unsplash for demonstration. Confirm licensing and replace with company-owned imagery for production branding if required.
+Upload the project to any standard PHP web host with Apache `mod_rewrite` (or equivalent Nginx rewrite rules). No build step required.

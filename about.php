@@ -1,19 +1,19 @@
 <?php
 $page_title = 'About Us | Trucking24Fit';
-$page_description = 'Learn about Trucking24Fit—our mission, values, and commitment to safe, reliable freight transportation for commercial shippers.';
+$page_description = 'About Trucking24Fit — a Fort McCoy, Florida trucking company focused on safe, reliable freight transportation for commercial shippers.';
 $current_page = 'about';
 require __DIR__ . '/includes/header.php';
 ?>
 
 <section class="page-hero">
   <div class="hero-media">
-    <img src="assets/images/fleet-trucks.jpg" alt="Trucking24Fit fleet of commercial trucks" width="1200" height="800" fetchpriority="high">
+    <img src="/assets/images/fleet-trucks.jpg" alt="Trucking24Fit commercial trucking operations" width="1200" height="800" fetchpriority="high">
   </div>
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="page-hero-content">
     <p class="eyebrow" style="color:var(--orange-400);">About Trucking24Fit</p>
     <h1>Built Around Reliable Freight Movement</h1>
-    <p>Trucking24Fit is a professional trucking and transportation company focused on helping commercial businesses move freight with clarity, care, and operational discipline.</p>
+    <p>Based in Fort McCoy, Florida, Trucking24Fit helps commercial businesses move freight with clarity, care, and operational discipline.</p>
   </div>
 </section>
 
@@ -23,12 +23,12 @@ require __DIR__ . '/includes/header.php';
       <div class="split-copy reveal">
         <p class="eyebrow">Who We Are</p>
         <h2>A Transportation Partner for Growing Businesses</h2>
-        <p>Trucking24Fit was formed to deliver dependable freight transportation and logistics support for shippers who need more than a one-time carrier—they need a professional partner.</p>
-        <p>We emphasize responsive communication, careful freight handling, and practical planning for regional and long-haul moves. Our team works with commercial customers across construction, manufacturing, wholesale, retail distribution, and related industries.</p>
-        <p><em style="color:var(--slate-500);">Company history, founding year, headquarters details, and verified credentials can be added here once confirmed by ownership.</em></p>
+        <p>Trucking24Fit provides dependable freight transportation and logistics support for shippers who need a professional partner—not just a one-time carrier.</p>
+        <p>From our operations base at 24820 NE 135th Lane in Fort McCoy, FL, we emphasize responsive communication, careful freight handling, and practical planning for Florida regional runs and longer multi-state lanes.</p>
+        <p>Our team works with commercial customers across construction, manufacturing, wholesale, retail distribution, building materials, and related industries that depend on predictable freight movement.</p>
       </div>
       <div class="split-media reveal">
-        <img src="assets/images/about-team.jpg" alt="Logistics professionals coordinating freight operations" width="800" height="600" loading="lazy">
+        <img src="/assets/images/about-team.jpg" alt="Logistics professionals coordinating freight operations" width="800" height="600" loading="lazy">
       </div>
     </div>
   </div>
@@ -45,7 +45,7 @@ require __DIR__ . '/includes/header.php';
       <div class="reveal">
         <p class="eyebrow">Vision</p>
         <h2>Our Vision</h2>
-        <p>To be recognized as a trusted American transportation partner known for operational strength, safety-minded practices, and consistent service quality for commercial shippers.</p>
+        <p>To be recognized as a trusted Florida-based transportation partner known for operational strength, safety-minded practices, and consistent service quality for commercial shippers.</p>
       </div>
     </div>
   </div>
@@ -91,19 +91,18 @@ require __DIR__ . '/includes/header.php';
   <div class="container">
     <div class="split reverse">
       <div class="split-media reveal">
-        <img src="assets/images/semi-trailer.jpg" alt="Semi-trailer on an American highway" width="1200" height="800" loading="lazy">
+        <img src="/assets/images/semi-trailer.jpg" alt="Semi-trailer on an American highway" width="1200" height="800" loading="lazy">
       </div>
       <div class="split-copy reveal">
         <p class="eyebrow">Safety &amp; Reliability</p>
         <h2>Commitment to Safe Transportation</h2>
-        <p>Every freight move carries responsibility. Trucking24Fit prioritizes safe driving practices, equipment readiness, and careful freight securing as foundational parts of our service—not afterthoughts.</p>
+        <p>Every freight move carries responsibility. Trucking24Fit prioritizes safe driving practices, equipment readiness, and careful freight securing as foundational parts of our service.</p>
         <ul class="check-list">
           <li>Pre-trip readiness and equipment awareness</li>
           <li>Clear load details before dispatch</li>
           <li>Respect for delivery windows and facility procedures</li>
           <li>Prompt updates when conditions affect transit</li>
         </ul>
-        <p><em style="color:var(--slate-500);">Safety ratings, insurance details, and compliance certifications can be published here after verification.</em></p>
       </div>
     </div>
   </div>
@@ -119,7 +118,7 @@ require __DIR__ . '/includes/header.php';
       <article class="service-card reveal">
         <div class="service-card-body">
           <h3>Straightforward Quoting</h3>
-          <p>Share your freight profile and we will respond with clear next steps—no unnecessary complexity.</p>
+          <p>Share your freight profile and we respond with clear next steps—no unnecessary complexity.</p>
         </div>
       </article>
       <article class="service-card reveal">
@@ -131,11 +130,11 @@ require __DIR__ . '/includes/header.php';
       <article class="service-card reveal">
         <div class="service-card-body">
           <h3>Flexible Capacity Planning</h3>
-          <p>Whether you need regional coverage or longer lanes, we help match freight needs with the right equipment approach.</p>
+          <p>Whether you need Florida regional coverage or longer lanes, we match freight needs with the right equipment.</p>
         </div>
       </article>
     </div>
-    <p class="reveal" style="margin-top:2rem;"><a class="btn btn-accent" href="quote.php">Request a Quote</a> <a class="btn btn-outline-dark" href="contact.php" style="margin-left:.5rem;">Contact Our Team</a></p>
+    <p class="reveal" style="margin-top:2rem;"><a class="btn btn-accent" href="/quote">Request a Quote</a> <a class="btn btn-outline-dark" href="/contact" style="margin-left:.5rem;">Contact Our Team</a></p>
   </div>
 </section>
 

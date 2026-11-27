@@ -16,7 +16,7 @@ require __DIR__ . '/includes/header.php';
 
 <section class="page-hero">
   <div class="hero-media">
-    <img src="assets/images/truck-highway.jpg" alt="Semi-truck on an American freight corridor" width="1200" height="800" fetchpriority="high">
+    <img src="/assets/images/truck-highway.jpg" alt="Semi-truck on an American freight corridor" width="1200" height="800" fetchpriority="high">
   </div>
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="page-hero-content">
@@ -32,7 +32,7 @@ require __DIR__ . '/includes/header.php';
       <h2 style="margin-bottom:0.35rem;">Freight Quotation Form</h2>
       <p class="form-hint" style="margin-bottom:1.5rem;">Accurate pickup, delivery, and freight details help us respond faster. Submissions are processed securely through our website form handler.</p>
 
-      <form id="quote-form" action="api/quote.php" method="post" data-ajax="true" novalidate>
+      <form id="quote-form" action="/api/quote" method="post" data-ajax="true" novalidate>
         <div class="form-grid">
           <div class="form-group">
             <label for="full_name">Full Name <span class="req">*</span></label>
@@ -134,7 +134,7 @@ require __DIR__ . '/includes/header.php';
 
 <section class="section-sm">
   <div class="container" style="text-align:center;">
-    <p>Prefer to speak with someone? Call <a href="<?= htmlspecialchars($site['phone_href'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($site['phone'], ENT_QUOTES, 'UTF-8') ?></a> or email <a href="<?= htmlspecialchars($site['email_href'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($site['email'], ENT_QUOTES, 'UTF-8') ?></a>.</p>
+    <p>Prefer to email our team directly? Reach us at <a href="<?= htmlspecialchars($site['email_href'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($site['email'], ENT_QUOTES, 'UTF-8') ?></a> · <?= htmlspecialchars($site['address'], ENT_QUOTES, 'UTF-8') ?></p>
   </div>
 </section>
 
