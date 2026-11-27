@@ -1,0 +1,4 @@
+# Allow PHP form endpoints only
+<FilesMatch "^(quote|contact)\.php$">
+  Require all granted
+</FilesMatch>

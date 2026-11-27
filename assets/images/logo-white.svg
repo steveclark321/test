@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" role="img" aria-label="Trucking24Fit">
+  <defs>
+    <linearGradient id="markGradW" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F48C06"/>
+      <stop offset="100%" stop-color="#E85D04"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="8" width="48" height="48" rx="6" fill="#12263F"/>
+  <path d="M10 40 L26 16 L42 40 Z" fill="none" stroke="url(#markGradW)" stroke-width="3.5" stroke-linejoin="round"/>
+  <rect x="22" y="28" width="8" height="14" rx="1.5" fill="#F48C06"/>
+  <path d="M14 44 H38" stroke="#F48C06" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="62" y="30" font-family="Arial Black, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="-0.5" fill="#FFFFFF">TRUCKING</text>
+  <text x="62" y="52" font-family="Arial Black, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="-0.5" fill="#F48C06">24FIT</text>
+</svg>

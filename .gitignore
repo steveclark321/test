@@ -1,0 +1,7 @@
+submissions/*
+!submissions/.htaccess
+!submissions/.rate/
+submissions/.rate/*
+!submissions/.rate/.gitkeep
+.DS_Store
+*.log
