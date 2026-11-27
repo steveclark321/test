@@ -34,7 +34,7 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  // Reveal on scroll
+  // Reveal on scroll (with safety fallback so content never stays hidden)
   const reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && reveals.length) {
     const io = new IntersectionObserver(
@@ -49,6 +49,9 @@
       { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
     reveals.forEach((el) => io.observe(el));
+    setTimeout(() => {
+      reveals.forEach((el) => el.classList.add("is-visible"));
+    }, 2500);
   } else {
     reveals.forEach((el) => el.classList.add("is-visible"));
   }
