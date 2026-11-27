@@ -1,6 +1,5 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "public",
+  "cleanUrls": true,
   "rewrites": [
     { "source": "/about", "destination": "/about.html" },
     { "source": "/services", "destination": "/services.html" },

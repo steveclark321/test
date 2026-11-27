@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Trucking24Fit professional trucking website",
   "scripts": {
-    "build": "node scripts/build-static.js",
+    "build": "node scripts/build-static.js && node scripts/sync-root-html.js",
     "dev": "php -S 127.0.0.1:8080 router.php"
   }
 }

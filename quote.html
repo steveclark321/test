@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request a Quote | Trucking24Fit</title>
+  <meta name="description" content="Request a freight transportation quote from Trucking24Fit. Provide shipment details for professional follow-up from our team.">
+  <meta name="theme-color" content="#0A1628">
+  <meta property="og:title" content="Request a Quote | Trucking24Fit">
+  <meta property="og:description" content="Request a freight transportation quote from Trucking24Fit. Provide shipment details for professional follow-up from our team.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Trucking24Fit">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Trucking24Fit home">
+        <img src="/assets/images/logo-white.svg" alt="Trucking24Fit" width="200" height="46" class="brand-logo">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+                                  <li><a href="/">Home</a></li>
+                                  <li><a href="/about">About Us</a></li>
+                                  <li><a href="/services">Services</a></li>
+                                  <li><a href="/equipment">Equipment</a></li>
+                                  <li><a href="/industries">Industries</a></li>
+                                  <li><a href="/contact">Contact</a></li>
+                    <li class="nav-cta"><a class="btn btn-accent btn-sm" href="/quote">Request a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+
+<section class="page-hero">
+  <div class="hero-media">
+    <img src="/assets/images/truck-highway.jpg" alt="Semi-truck on an American freight corridor" width="1200" height="800" fetchpriority="high">
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="page-hero-content">
+    <p class="eyebrow" style="color:var(--orange-400);">Get Started</p>
+    <h1>Request a Freight Quote</h1>
+    <p>Share your shipment details below. Trucking24Fit will review your request and follow up with next steps. Required fields are marked.</p>
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container" style="max-width:920px;">
+    <div class="form-panel reveal">
+      <h2 style="margin-bottom:0.35rem;">Freight Quotation Form</h2>
+      <p class="form-hint" style="margin-bottom:1.5rem;">Accurate pickup, delivery, and freight details help us respond faster. Submissions are processed securely through our website form handler.</p>
+
+      <form id="quote-form" action="/api/quote" method="post" data-ajax="true" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="full_name">Full Name <span class="req">*</span></label>
+            <input type="text" id="full_name" name="full_name" autocomplete="name" required maxlength="120">
+            <div class="error-text" aria-live="polite"></div>
+          </div>
+          <div class="form-group">
+            <label for="company_name">Company Name <span class="req">*</span></label>
+            <input type="text" id="company_name" name="company_name" autocomplete="organization" required maxlength="160">
+            <div class="error-text" aria-live="polite"></div>
+          </div>
+          <div class="form-group">
+            <label for="business_email">Business Email <span class="req">*</span></label>
+            <input type="email" id="business_email" name="business_email" autocomplete="email" required maxlength="160">
+            <div class="error-text" aria-live="polite"></div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required maxlength="40">
+            <div class="error-text" aria-live="polite"></div>
+          </div>
+          <div class="form-group">
+            <label for="pickup_location">Pickup Location <span class="req">*</span></label>
+            <input type="text" id="pickup_location" name="pickup_location" placeholder="City, ST or ZIP" required maxlength="200">
+            <div class="error-text" aria-live="polite"></div>
+          </div>
+          <div class="form-group">
+            <label for="delivery_location">Delivery Location <span class="req">*</span></label>
+            <input type="text" id="delivery_location" name="delivery_location" placeholder="City, ST or ZIP" required maxlength="200">
+            <div class="error-text" aria-live="polite"></div>
+          </div>
+          <div class="form-group">
+            <label for="freight_type">Freight Type <span class="req">*</span></label>
+            <select id="freight_type" name="freight_type" required>
+              <option value="">Select freight type</option>
+              <option>General Freight</option>
+              <option>Palletized Goods</option>
+              <option>Building Materials</option>
+              <option>Industrial Equipment</option>
+              <option>Retail Merchandise</option>
+              <option>Temperature-Sensitive</option>
+              <option>Other / Mixed</option>
+            </select>
+            <div class="error-text" aria-live="polite"></div>
+          </div>
+          <div class="form-group">
+            <label for="equipment_required">Equipment Required <span class="req">*</span></label>
+            <select id="equipment_required" name="equipment_required" required>
+              <option value="">Select equipment</option>
+              <option>Dry Van</option>
+              <option>Flatbed</option>
+              <option>Refrigerated</option>
+              <option>Box Truck</option>
+              <option>Not Sure / Need Recommendation</option>
+            </select>
+            <div class="error-text" aria-live="polite"></div>
+          </div>
+          <div class="form-group">
+            <label for="estimated_weight">Estimated Weight</label>
+            <input type="text" id="estimated_weight" name="estimated_weight" placeholder="e.g., 12,000 lbs" maxlength="80">
+            <div class="error-text" aria-live="polite"></div>
+          </div>
+          <div class="form-group">
+            <label for="number_of_pallets">Number of Pallets</label>
+            <input type="text" id="number_of_pallets" name="number_of_pallets" placeholder="e.g., 8" maxlength="40">
+            <div class="error-text" aria-live="polite"></div>
+          </div>
+          <div class="form-group">
+            <label for="pickup_date">Pickup Date</label>
+            <input type="date" id="pickup_date" name="pickup_date">
+            <div class="error-text" aria-live="polite"></div>
+          </div>
+          <div class="form-group">
+            <label for="delivery_date">Delivery Date</label>
+            <input type="date" id="delivery_date" name="delivery_date">
+            <div class="error-text" aria-live="polite"></div>
+          </div>
+          <div class="form-group full">
+            <label for="additional_details">Additional Shipment Details</label>
+            <textarea id="additional_details" name="additional_details" maxlength="2000" placeholder="Dimensions, appointment requirements, hazmat status (if any), special handling, etc."></textarea>
+            <div class="error-text" aria-live="polite"></div>
+          </div>
+
+          <!-- Honeypot -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="website_url">Website</label>
+            <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-accent" type="submit">Submit Request</button>
+            <p class="form-hint">By submitting, you agree to be contacted about this shipment request. We do not sell your information.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container" style="text-align:center;">
+    <p>Prefer to email our team directly? Reach us at <a href="mailto:contact@trucking24fit.org">contact@trucking24fit.org</a> · 24820 NE 135th Lane, Fort McCoy, FL 32134</p>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="/assets/images/logo-white.svg" alt="Trucking24Fit" width="200" height="46">
+          <p>Professional trucking, freight transportation, and logistics support for commercial shippers across Florida and nationwide lanes.</p>
+          <a class="btn btn-accent btn-sm" href="/quote">Request a Quote</a>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/equipment">Equipment &amp; Fleet</a></li>
+            <li><a href="/industries">Industries</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Services</h3>
+          <ul>
+                          <li><a href="/services#ftl">Full Truckload (FTL)</a></li>
+                          <li><a href="/services#ltl">Less Than Truckload (LTL)</a></li>
+                          <li><a href="/services#dedicated">Dedicated Transportation</a></li>
+                          <li><a href="/services#regional">Regional Freight</a></li>
+                          <li><a href="/services#long-haul">Long-Haul Trucking</a></li>
+                          <li><a href="/services#expedited">Expedited Freight</a></li>
+                      </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul class="footer-contact">
+            <li><a href="mailto:contact@trucking24fit.org">contact@trucking24fit.org</a></li>
+            <li>24820 NE 135th Lane</li>
+            <li>Fort McCoy, FL 32134</li>
+            <li>Monday – Friday, 8:00 AM – 6:00 PM ET</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Trucking24Fit. All rights reserved.</p>
+        <p class="footer-note">Based in Fort McCoy, Florida · Serving commercial freight customers nationwide</p>
+      </div>
+    </div>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

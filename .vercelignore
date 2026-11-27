@@ -3,3 +3,4 @@ includes
 php-api
 *.php
 router.php
+public
