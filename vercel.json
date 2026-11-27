@@ -1,6 +1,5 @@
 {
-  "version": 2,
-  "buildCommand": "node scripts/build-static.js",
+  "buildCommand": "npm run build",
   "outputDirectory": "public",
   "rewrites": [
     { "source": "/about", "destination": "/about.html" },
