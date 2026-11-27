@@ -15,8 +15,8 @@ $routes = [
     '/industries' => 'industries.php',
     '/quote' => 'quote.php',
     '/contact' => 'contact.php',
-    '/api/quote' => 'api/quote.php',
-    '/api/contact' => 'api/contact.php',
+    '/api/quote' => 'php-api/quote.php',
+    '/api/contact' => 'php-api/contact.php',
 ];
 
 // Redirect visible .php page URLs to clean paths

@@ -20,8 +20,8 @@ Options -Indexes
   # Clean URL → PHP file
   RewriteRule ^(about|services|equipment|industries|quote|contact)/?$ $1.php [L,QSA]
 
-  # Clean API endpoints
-  RewriteRule ^api/(quote|contact)/?$ api/$1.php [L,QSA]
+  # Clean API endpoints (PHP hosting)
+  RewriteRule ^api/(quote|contact)/?$ php-api/$1.php [L,QSA]
 </IfModule>
 
 <IfModule mod_headers.c>

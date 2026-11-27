@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /includes/
+Disallow: /submissions/
+
+Sitemap: https://trucking24fit.org/sitemap.xml

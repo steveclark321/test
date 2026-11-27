@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "buildCommand": "node scripts/build-static.js",
+  "outputDirectory": "public",
+  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/equipment", "destination": "/equipment.html" },
+    { "source": "/industries", "destination": "/industries.html" },
+    { "source": "/quote", "destination": "/quote.html" },
+    { "source": "/contact", "destination": "/contact.html" }
+  ],
+  "redirects": [
+    { "source": "/index.php", "destination": "/", "permanent": true },
+    { "source": "/about.php", "destination": "/about", "permanent": true },
+    { "source": "/services.php", "destination": "/services", "permanent": true },
+    { "source": "/equipment.php", "destination": "/equipment", "permanent": true },
+    { "source": "/industries.php", "destination": "/industries", "permanent": true },
+    { "source": "/quote.php", "destination": "/quote", "permanent": true },
+    { "source": "/contact.php", "destination": "/contact", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}
