@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 /**
- * Build static HTML for Vercel from the PHP page templates.
- * Requires PHP CLI available at build time (local/CI). On Vercel we also
- * commit/prebuild public/ so deploy works without PHP on the builder.
+ * Build static HTML for Vercel from the PHP page templates when PHP is available.
+ * On Vercel (no PHP), reuse committed public/*.html and copy assets.
  */
-const { execFileSync, existsSync } = require('child_process');
+const { execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
@@ -42,10 +41,15 @@ if (usedPhp) {
     fs.writeFileSync(path.join(publicDir, `${page}.html`), out);
   }
   console.log('Built HTML from PHP templates.');
-} else if (pages.every((p) => existsSync(path.join(publicDir, `${p}.html`)))) {
+} else if (pages.every((p) => fs.existsSync(path.join(publicDir, `${p}.html`)))) {
   console.log('PHP not available — using existing public/*.html');
+} else if (pages.every((p) => fs.existsSync(path.join(root, `${p}.html`)))) {
+  for (const page of pages) {
+    fs.copyFileSync(path.join(root, `${page}.html`), path.join(publicDir, `${page}.html`));
+  }
+  console.log('PHP not available — copied root HTML into public/');
 } else {
-  console.error('No PHP and no prebuilt public HTML found.');
+  console.error('No PHP and no prebuilt HTML found.');
   process.exit(1);
 }
 
