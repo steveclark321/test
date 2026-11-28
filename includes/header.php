@@ -28,7 +28,7 @@ $body_class = $body_class ?? '';
   <header class="site-header" id="top">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="Trucking24Fit home">
-        <img src="/assets/images/logo-white.svg" alt="Trucking24Fit" width="200" height="46" class="brand-logo">
+        <img src="/assets/images/logo-white.svg" alt="Trucking24Fit" width="220" height="40" class="brand-logo">
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
         <span></span><span></span><span></span>

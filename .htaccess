@@ -14,11 +14,11 @@ Options -Indexes
   RewriteCond %{THE_REQUEST} \s/index\.php[\s?] [NC]
   RewriteRule ^index\.php$ / [R=301,L]
 
-  RewriteCond %{THE_REQUEST} \s/+((?:about|services|equipment|industries|quote|contact))\.php[\s?] [NC]
+  RewriteCond %{THE_REQUEST} \s/+((?:about|services|equipment|industries|quote|contact|privacy|terms))\.php[\s?] [NC]
   RewriteRule ^ %1 [R=301,L]
 
   # Clean URL → PHP file
-  RewriteRule ^(about|services|equipment|industries|quote|contact)/?$ $1.php [L,QSA]
+  RewriteRule ^(about|services|equipment|industries|quote|contact|privacy|terms)/?$ $1.php [L,QSA]
 
   # Clean API endpoints (PHP hosting)
   RewriteRule ^api/(quote|contact)/?$ php-api/$1.php [L,QSA]

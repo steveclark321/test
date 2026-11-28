@@ -15,12 +15,14 @@ $routes = [
     '/industries' => 'industries.php',
     '/quote' => 'quote.php',
     '/contact' => 'contact.php',
+    '/privacy' => 'privacy.php',
+    '/terms' => 'terms.php',
     '/api/quote' => 'php-api/quote.php',
     '/api/contact' => 'php-api/contact.php',
 ];
 
 // Redirect visible .php page URLs to clean paths
-if (preg_match('#^/(index|about|services|equipment|industries|quote|contact)\.php$#', $path, $m)) {
+if (preg_match('#^/(index|about|services|equipment|industries|quote|contact|privacy|terms)\.php$#', $path, $m)) {
     $target = $m[1] === 'index' ? '/' : '/' . $m[1];
     $qs = $_SERVER['QUERY_STRING'] ?? '';
     header('Location: ' . $target . ($qs !== '' ? '?' . $qs : ''), true, 301);

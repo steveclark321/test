@@ -199,6 +199,28 @@ require __DIR__ . '/includes/header.php';
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <div class="split-copy reveal">
+        <p class="eyebrow">Insurance</p>
+        <h2>Commercial Coverage for Business Freight</h2>
+        <p>Trucking24Fit maintains commercial auto liability, motor truck cargo, and general liability insurance appropriate for professional freight operations. Certificates of Insurance are available upon request.</p>
+        <ul class="check-list">
+          <li>Commercial Auto Liability</li>
+          <li>Motor Truck Cargo Coverage</li>
+          <li>General Liability</li>
+          <li>COI available for qualified partners</li>
+        </ul>
+        <p style="margin-top:1.5rem;"><a class="btn btn-outline-dark" href="/about#insurance">View Insurance Summary</a></p>
+      </div>
+      <div class="split-media reveal">
+        <img src="/assets/images/semi-trailer.jpg" alt="Trucking24Fit insured commercial freight transport" width="1200" height="800" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="cta-band">
   <div class="container reveal">
     <h2>Ready to Move Your Next Shipment?</h2>

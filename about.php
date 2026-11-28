@@ -108,6 +108,35 @@ require __DIR__ . '/includes/header.php';
   </div>
 </section>
 
+<section class="section section-navy" id="insurance">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Protection</p>
+      <h2>Insurance Summary</h2>
+      <p class="lead">Trucking24Fit maintains commercial transportation insurance appropriate for professional freight operations. Certificates of Insurance (COI) are available upon request for qualified business partners.</p>
+    </div>
+    <div class="values-grid">
+      <article class="value-item reveal">
+        <h3>Commercial Auto Liability</h3>
+        <p>Coverage for commercial vehicle operations supporting our trucking and freight transportation services.</p>
+      </article>
+      <article class="value-item reveal">
+        <h3>Motor Truck Cargo</h3>
+        <p>Cargo insurance to help protect eligible freight while in transit under Trucking24Fit transportation arrangements.</p>
+      </article>
+      <article class="value-item reveal">
+        <h3>General Liability</h3>
+        <p>Commercial general liability coverage supporting business operations and customer facility interactions.</p>
+      </article>
+    </div>
+    <p class="reveal" style="margin-top:1.75rem;">
+      To request a Certificate of Insurance, email
+      <a href="mailto:contact@trucking24fit.org" style="color:var(--orange-400);">contact@trucking24fit.org</a>
+      with your company name and certificate holder details.
+    </p>
+  </div>
+</section>
+
 <section class="section section-muted">
   <div class="container">
     <div class="section-head reveal">

@@ -6,7 +6,9 @@
     { "source": "/equipment", "destination": "/equipment.html" },
     { "source": "/industries", "destination": "/industries.html" },
     { "source": "/quote", "destination": "/quote.html" },
-    { "source": "/contact", "destination": "/contact.html" }
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/terms", "destination": "/terms.html" }
   ],
   "redirects": [
     { "source": "/index.php", "destination": "/", "permanent": true },
@@ -15,7 +17,9 @@
     { "source": "/equipment.php", "destination": "/equipment", "permanent": true },
     { "source": "/industries.php", "destination": "/industries", "permanent": true },
     { "source": "/quote.php", "destination": "/quote", "permanent": true },
-    { "source": "/contact.php", "destination": "/contact", "permanent": true }
+    { "source": "/contact.php", "destination": "/contact", "permanent": true },
+    { "source": "/privacy.php", "destination": "/privacy", "permanent": true },
+    { "source": "/terms.php", "destination": "/terms", "permanent": true }
   ],
   "headers": [
     {

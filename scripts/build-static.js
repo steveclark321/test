@@ -9,7 +9,7 @@ const path = require('path');
 
 const root = path.join(__dirname, '..');
 const publicDir = path.join(root, 'public');
-const pages = ['index', 'about', 'services', 'equipment', 'industries', 'quote', 'contact'];
+const pages = ['index', 'about', 'services', 'equipment', 'industries', 'quote', 'contact', 'privacy', 'terms'];
 
 fs.mkdirSync(publicDir, { recursive: true });
 
